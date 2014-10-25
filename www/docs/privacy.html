@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> dowse | Privacy by Design </title>
+    <link rel="stylesheet" title="Dowse CSS" href="/ui/style.css" type="text/css">
+  </head>
+<body class="splash">
+  <header id="header">
+    <hgroup>
+      <h1><a href="/">Dyne:dowse</a> | Privacy Policy</h1>
+      <h2>Friendly and Responsible Local Networking</h2>
+    </hgroup>
+  </header>
+  <main>
+    <nav id="toc">
+      <h1>Table of Contents</h1>
+      <ol>
+	<li><a href="#tldr">Summary</a></li>
+	<li><a href="#privacy-by-design">Privacy by Design</a></li>
+	<li><a href="#network-monitoring">Network Monitoring</a></li>
+	<li><a href="#data-storage">Data Storage</a></li>
+	<li><a href="#remote-access">Remote Access</a></li>
+	<li><a href="#policy-update">Policy Updates</a></li>
+	<li><a href="#canary">Canary</a> (we're safe)</li>
+      </ol>
+    <article>
+      <section id="tldr">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#tldr">#tldr</a>
+	</nav>
+	<h1>Summary</h1>
+
+	<p><strong><abbr title="Too Long; Didn't Read">tl;dr</abbr></strong>:
+
+	  Dowse is free software dedicated to enhancing the
+	  conviviality of your online networking experience, and your
+	  peace of mind.  Preserving your privacy is part of this
+	  mission.  <strong>Dowse will never spy on you nor disclose
+	  your network information to anyone.</strong></p>
+
+      </section>
+      <section id="privacy-by-design">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#privacy-by-design">#privacy-by-design</a>
+	</nav>
+	<h1>Privacy by Design</h1>
+
+	<p>Dyne:dowse
+	is <a href="https://gnu.org/philosophy/free-sw.html"
+	class="extref">free software</a>.  It follows the principle
+	of <strong>privacy by design</strong>: that means the
+	developers care about the your freedom, and protecting your
+	privacy.</p>
+
+	<p>The objective of Dowse is to put you in control of your own
+	network, and protect your privacy from prying eyes, from
+	advertisers on the Web, to your ISP, or rogue devices on your
+	local network.</p>
+
+	<p>Dowse does not, and will never provide any information on
+	your local network to third parties, including to Dowse
+	developers and partners.  Your network is yours, and your
+	privacy is critical to the success of our products.  There is
+	not, however, any security measure that will prevent a
+	determined individual from voluntarily leaking information
+	from within your network to a third party.  Our promise is
+	that if such an attempt is detected, Dowse will tell you, and
+	if there is a way to prevent it, Dowse will implement it in
+	the best of our developers' abilities.</p>
+
+      </section>
+
+      <section id="network-monitoring">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#network-monitoring">#network-monitoring</a>
+	</nav>
+	<h1>Network Monitoring</h1>
+
+	<p>In order to manage devices and provide safe networking
+	conditions on your network, Dowse is monitoring connecting
+	devices, and make them visible to the administrators of the
+	Dowse appliance.</p>
+
+	<p>Identifying information such as the MAC address, and other
+	device information is used by Dowse to provide services, such
+	as selective connectivity to unknown devices, or plain
+	rejection of unwanted devices.  This information is stored on
+	the Dowse appliance.</p>
+
+	<p>No information about your network needs to be sent beyond
+	it, so Dowse is not sending anything about it outside of your
+	local network.</p>
+
+      </section>
+      <section id="data-storage">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#data-storage">#data-storage</a>
+	</nav>
+	<h1>Data Storage</h1>
+
+	<p>Privacy-sensitive data is stored on the Dowse device.  The
+	storage is NOT YET made on encrypted filesystem, so we
+	recommend that you encrypt your filesystem prior to installing
+	Dowse software.</p>
+
+	<p>Dowse keeps information about known devices, but never
+	communicates that data to anyone but you.  When it is
+	implemented, you can use the RESET button to empty the
+	database and restart the Dowse system.  It will recreate its
+	database and populate it with the devices it detects when it
+	starts.</p>
+
+      </section>
+      <section id="remote-access">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#remote-access">#remote-access</a>
+	</nav>
+	<h1>Remote Access</h1>
+
+	<p>You can choose to enable upgrade detection: Dowse will
+	connect to the <strong>dowse.equipment</strong> service over
+	Tor to retrieve information about an eventual new release.
+	You should always use your operating system's package manager
+	to perform upgrades.  Dowse does not provide automated
+	upgrades besides that of the operating system.</p>
+
+	<p>The Dowse appliance is accessible via this Web interface,
+	but only from the local network.  Privacy-sensitive operations
+	require administrative control, which can be setup using the
+	pairing mechanism upon installation.  Once this step has been
+	performed, further devices can be authorized by existing
+	administrators.</p>
+
+	<p>All Dowse configuration, including accessible via this Web
+	interface, are done via the Dowse API.  All operations require
+	authentication and authorization from known local clients.</p>
+
+	<p>Dowse does not offer any access from outside the LAN.</p>
+
+	<p>Some modules might provide extra services, e.g., to enable
+	a Tor relay, or an SSH tunnel: use them with care.  Such
+	modules are labeled appropriately.</p>
+
+      </section>
+      <section id="policy-update">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#policy-update">#policy-update</a>
+	</nav>
+	<h1>Privacy Policy Updates</h1>
+
+	<p>Policy updates will happen via release upgrades.  They will
+	not change to rip you off your privacy, because we're not a
+	corporation, we're not a government, we're not looking to be
+	bought by a corporation, and you're not for sale.  Dowse is a
+	free software project dedicated to protect your privacy, and
+	this point will never change.</p>
+      </section>
+
+      <section id="canary">
+	<nav>
+	  <a href="#top" title="Jump to top of this document">^^</a>
+	  <a href="#canary">#canary</a>
+	</nav>
+	<p><strong>Canary:</strong> Dowse developers were not
+	contacted by any secret services, or prying systems that may
+	be able to legally silence us.  We were not told to introduce
+	a backdoor in our software, track our users, nor do anything
+	susceptible to affect you.  We're clear from evil.</p>
+
+      </section>
+    </article>
+  </main>
+  <aside></aside>
+  <footer>
+    <section id="copyleft">
+      <a href="/docs/privacy.html" rel="privacy policy" data-title="legal"><span>Privacy Policy</span></a>
+      —
+      <a href="https://gnu.org/licenses/agpl" rel="license" data-title="AGPLv3+"><span>GNU Affero General Public License</span></a>
+      —
+      <a href="https://github.com/dyne/dowse" rel="source code" data-title="git"><span>To the Source</span></a>
+      —
+      <a href="https://github.com/dyne/dowse/issues" rel="issue tracker" data-title="bugs"><span>Known Issues</span></a>
+      —
+      <span class="copyright">Copy<span>right</span></span>&nbsp;<span class="copy">©</span>2014
+      <a href="https://dyne.org/" rel="home" data-title="Dyne.org"><span>Dyne Foundation</span></a>
+      <ul id="partners">
+	<li><a href="http://dyne.org/" id="dyne-icon-link"><span>Dyne.org</span></a></li>
+	<li><a href="http://dowse.eu/" id="dowse-icon-link"><span>Dowse.eu</span></a></li>
+	<li><a href="http://waag.org/" id="waag-icon-link"><span>Waag.org</span></a></li>
+      </ul>
+    </section>
+    <section class="one-third" id="colophon">
+      <h3>About Dowse</h3>
+      <ul>
+	<li><a href="http://dowse.equipment/" rel="endorsed" title="All about Dowse project">Dowse equipment</a></li>
+	<li><a href="https://github.com/dyne/dowse/#readme" rel="endorsed" title="Developer Information">Dyne:dowse</a></li>
+	<li><a href="https://waag.org/en/project/dowse" title="Institute for Art, Science &amp; Technology">De Waag Society</a></li>
+	<li><a href="https://www.dyne.org/donate/#dowse" rel="donate" title="Free as in freedom means we need your money!">Donate</a></li>
+      </ul>
+    </section>
+  </footer>
+  <!-- Dowse App -->
+  <script type="text/javascript" id="dowse-app-script" href="/ui/dowse-app.js"></script>
+</body>
+</html>

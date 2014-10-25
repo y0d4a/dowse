@@ -1,0 +1,308 @@
+body {
+    font-family: "Open Sans", Lato, Raleway, sans-serif;
+}
+
+body.splash main {
+    position:absolute;
+    bottom:2em;
+    background-attachment: fixed;
+    background-color: transparent;
+    background-image: url(/ui/dowse.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/** 
+ * The body class contains the Dowse status information, and is
+ * reflected in the header background gradient.  These are example
+ * classes (not yet implemented).
+ */
+body.status-ok      header { background-color: rgba(0,255,0,0.5); }
+body.status-ko      header { background-color: rgba(255,0,0,0.5); }
+body.status-boot    header { background-color: rgba(0,0,0,1);     }
+body.status-check   header { background-color: rgba(0,0,0,0.8);   }
+body.status-start   header { background-color: rgba(0,0,0,0.6);   }
+body.status-started header { background-color: rgba(0,0,0,0.4);   }
+body.status-online  header { background-color: rgba(0,0,0,0.2);   }
+
+h1, h2, h3, h4 {
+    font-family: "Poiret One", Comfortaa, Bauhaus, serif;
+}
+
+/**
+ * header
+ */
+#header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:2em;
+    background-color: blue;
+    color: white;
+    padding-bottom: 2em;
+    font-family: "Poiret One", Comfortaa, Bauhaus, serif;
+    overflow: hidden;
+    z-index: 97;
+
+    /* background gradient */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,255,1)), to(black));  /* Chrome 1-9, Safari 4-5 */ 
+    background: -webkit-linear-gradient(top, rgba(0,0,255,1), black);                        /* Chrome 10+, Safari 5.1  */
+    background: -moz-linear-gradient(top, rgba(0,0,255,1), black);                           /* Firefox 3.6+ */
+    background: -ms-linear-gradient(top, rgba(0,0,255,1), black);                            /* IE 10 */
+    background: -o-linear-gradient(top, rgba(0,0,255,1), black);                             /* Opera 11.10+ */
+
+}
+
+#header:hover, #header:focus {
+    height: auto;
+    overflow: visible;
+}
+
+#header hgroup {
+    padding: 0 1em;
+}
+
+#header a {
+    text-decoration: none;
+    color: white;
+}
+#header a:hover, #header a:focus {
+    text-decoration: underline;
+    color: black;
+}
+
+/**
+ * main
+ */
+
+body>main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 4em 2em 0 2em;
+    max-width: 100%;
+}
+
+main #toc {
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+main article {
+    background-color: rgba(255,255,255,0.75); 
+    color: rgba(0,0,0,0.75);
+    padding-bottom: 5em;
+}
+main article:after {
+    content: "That's all folks!";
+    display: block;
+    margin: 0 auto;
+    font-size: 8em;
+    padding-top: 5em;
+    font-family: "Poiret One", Comfortaa, cursive;
+}
+
+article section {
+    padding-top: 6em;
+}
+
+article section h1 {
+    font-size: 2em;
+    margin-top: 0.25em;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+article nav {
+    font-family: monospace;
+    font-size: smaller;
+}
+
+article p {
+    max-width: 45em;
+    font-size: 85%;
+}
+
+/**
+ * footer
+ */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    font-family: monospace;
+    font-size: smaller;
+    height: 2em;
+    z-index: 98;
+}
+footer:hover {
+    height: auto;
+}
+
+footer section {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+
+footer:hover section {
+    display: block;
+}
+
+footer section.one-third {
+    width: 33%;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+}
+footer section.one-third h3 {
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(0,0,0,0.2);
+    color: rgba(255,255,255,0.8);
+}
+footer section.one-third:hover h3 {
+    background-color: rgba(0,0,0,0.8);
+}
+footer section.one-third ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer section.one-third ul li {
+
+}
+footer section.one-third ul li:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+footer section.one-third ul li a {
+    color: rgba(0,0,0,1);
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+footer section.one-third ul li:hover a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer ul#partners {
+    position: fixed;
+    bottom: 0.5em;
+    right: 4em;
+    list-style: none;
+    margin: 0 2em;
+    padding: 0;
+    display: block;
+}
+footer ul#partners li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+footer ul#partners a {
+    display: inline-block;
+    width: 32px;
+    height: 20px;
+    bottom: 0.5em;
+    background-color: transparent;
+    background-image: url(/ui/dowse-icon-partners.png);
+    background-repeat: no-repeat;
+}
+footer ul#partners li span {
+    display:none;
+}
+footer ul#partners #dowse-icon-link {
+    background-position: 0px -40px;
+}
+footer ul#partners #waag-icon-link {
+    background-position: 0px -20px;
+}
+footer ul#partners #dyne-icon-link {
+    background-position: 0px 0px;
+}
+
+
+/**
+ * CopyLEFT FTW!
+ *
+ * When the mouse hovers the section, replace Copyright with Copyleft
+ * and rotate the © sign.
+ */
+
+footer #copyleft {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 2em;
+    right: 2em;
+    height: 2em;
+}
+footer:hover #copyleft span.copyright span {
+    display: none;
+}
+footer:hover #copyleft span.copyright:after {
+    content: "left ";
+}
+footer:hover #copyleft span.copy {
+    display: inline-block;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+
+/**
+ * Rules for smaller displays
+ */
+
+@media screen and (max-width:640px) {
+
+    body { font-size: small; }
+
+    footer { font-size: xx-small; }
+
+    footer ul#partners {
+	right: 0;
+	height: 5em;
+    }
+
+    /**
+     * Shorten links on small displays
+     */
+    footer #copyleft a span        { display:none; }
+    footer #copyleft a[rel]:before { content:attr(data-title); }
+
+}
+
+/**
+ * Rules for larger displays
+ */
+@media screen and (min-width:800px) {
+
+    /**
+     * Display title in footer links
+     */
+    footer section.one-third ul li:hover a:after {
+	content: "(" attr(title) ")";
+	display: inline-block;
+	position: absolute;
+	right: 2em;
+	font-weight: normal;
+	text-align: right;
+	text-decoration: none;
+    }
+
+}
