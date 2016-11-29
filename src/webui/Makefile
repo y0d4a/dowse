@@ -5,7 +5,7 @@ INCLUDEOPTS+=-I/usr/include
 WEBUI_PROTOTYPE_H=src/webui_prototype.h
 TMP=src/.tmp_file
 
-all: cproto asset
+all: asset cproto
 	rm -f assets/*~
 	cp -f conf/webui.conf.dist conf/webui.conf
 	../kore/kore flavor prod

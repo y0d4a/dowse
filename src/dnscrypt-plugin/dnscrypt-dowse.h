@@ -26,9 +26,7 @@
 // just for NI_MAXHOST
 #include <netdb.h>
 
-// for map_t
-#include "hashmap.h"
-
+#include <libdowse/dowse.h>
 
 // expiration in seconds for the domain hit counter
 #define DNS_HIT_EXPIRE 21600
@@ -44,10 +42,6 @@
 #define MAX_LINE 512
 
 typedef struct {
-	/////////
-	// flags
-	int caching;
-
 	////////
 	// data
 
@@ -63,6 +57,7 @@ typedef struct {
 	char ownip4[NI_MAXHOST];
 	char netmask_ip4[NI_MAXHOST];
 	char network_ip4[NI_MAXHOST];
+
 	struct in_addr ownip4_ia;
 	struct in_addr netmask_ip4_ia;
 	struct in_addr network_ip4_ia;
