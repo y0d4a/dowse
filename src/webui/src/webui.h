@@ -1,5 +1,4 @@
-#ifndef __WEBUI_H_
-#define __WEBUI_H_
+#include <stdlib.h>
 #include <webui_debug.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -16,7 +15,12 @@
 #include <stdio.h>
 #include <attributes_set.h>
 #include <template.h>
+#include <redis.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
+#ifndef __WEBUI_H_
+#define __WEBUI_H_
 
 #define mb (1024*500)
 #define ml (1024*3)
@@ -36,8 +40,7 @@
 #define DB_SOCK_DIRECTORY "$R/mysqld/mysqld.sock"
 #endif
 
+#endif
 
 #include <webui_common_var.h>
 #include <webui_prototype.h>
-
-#endif
