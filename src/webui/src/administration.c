@@ -21,6 +21,17 @@
  */
 #include <webui.h>
 
+
+
+/**
+ * @file administration.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the administration page
+ *
+ */
+
+
 int administration(struct http_request * req) {
     template_t tmpl;
 	attributes_set_t attr;
@@ -48,3 +59,4 @@ int administration(struct http_request * req) {
 
     return (KORE_RESULT_OK);
 }
+

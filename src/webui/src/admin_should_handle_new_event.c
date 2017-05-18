@@ -55,6 +55,8 @@ int admin_should_handle_new_event(char*macaddr) {
 /**
  *  @brief Function to get on Redis the value of a key
  *
+ *   This function hidden some "boilerplate" code
+ *
  * */
 int redis_get_key(const char* key, char*value, int sizeof_value) {
     redisContext *redis = NULL;
