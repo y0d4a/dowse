@@ -45,7 +45,7 @@ int captive_portal_admin(struct http_request * req) {
             &attr);
 
     /* Put the captive portal redirect */
-    sqlexecute("CALL redirect_admin_to_captive_portal('admin');",&attr);
+    sql_execute("CALL redirect_admin_to_captive_portal('admin');",&attr);
 
     template_load("assets/captive_portal_admin.html",&tmpl);
     template_apply(&tmpl,attr,out);

@@ -67,7 +67,7 @@ int reset_admin(struct http_request * req) {
                        "macaddr",iptype,
                        identity.macaddr,identity.ipaddr_value,__ENABLE_TO_BROWSE_STR,__ENABLE_TO_BROWSE_STR
                );
-        rv=sqlexecute(m,&attr);
+        rv=sql_execute(m,&attr);
         if (rv==KORE_RESULT_ERROR) {
             err("Error during admin found insert or update");
             return show_generic_message_page(req,attr);

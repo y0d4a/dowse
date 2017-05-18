@@ -1,5 +1,5 @@
 /*
- * sqlexecute.c
+ * sql_execute.c
  *
  *  Created on: 14 nov 2016
  *      Author: nop
@@ -10,7 +10,7 @@
 #include <webui.h>
 
 /* execute a SQL statement and return error message on ptr_attrl */
-int sqlexecute(char*command,attributes_set_t *ptr_attrl){
+int sql_execute(char*command,attributes_set_t *ptr_attrl){
   MYSQL *db ;
 
   WEBUI_DEBUG;

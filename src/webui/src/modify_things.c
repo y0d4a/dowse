@@ -59,7 +59,7 @@ int modify_things(struct http_request * req) {
             "UPDATE found set %s='%s' where upper(macaddr)=upper('%s')",
             column,value,macaddr);
 
-    int rv=sqlexecute(sql,&attr);
+    int rv=sql_execute(sql,&attr);
     if (rv!=KORE_RESULT_OK)
 	/**/
     WEBUI_DEBUG;

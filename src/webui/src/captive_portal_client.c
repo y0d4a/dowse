@@ -55,14 +55,14 @@ int captive_portal_client(struct http_request * req) {
      "VALUES (upper('%s'),'%s','%s') ",identity.macaddr,ip4,ip6);
      WEBUI_DEBUG;
 
-     if ( sqlexecute(sql, &attr) != KORE_RESULT_OK) {
+     if ( sql_execute(sql, &attr) != KORE_RESULT_OK) {
          return show_generic_message_page(req,attr);
      }
     snprintf(sql,sizeof(sql),"INSERT INTO event (level,macaddr,ip4,ip6,description) "
             "VALUES ('warning',upper('%s'),'%s','%s','%s') ",identity.macaddr,ip4,ip6, __EVENT_NEW_MAC_ADDRESS);
     WEBUI_DEBUG;
 
-    if ( sqlexecute(sql, &attr) != KORE_RESULT_OK) {
+    if ( sql_execute(sql, &attr) != KORE_RESULT_OK) {
         return show_generic_message_page(req,attr);
     }
 

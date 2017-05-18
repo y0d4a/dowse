@@ -76,13 +76,13 @@ int modify_event(struct http_request * req) {
                 " UPDATE event SET recognized=true where upper(macaddr)=upper('%s') and description='new_mac_address'",
                 macaddr);
     }
-/*    int rv1 = sqlexecute(action_sql, &attr);
+/*    int rv1 = sql_execute(action_sql, &attr);
     if (rv1 != KORE_RESULT_OK) {
         return show_generic_message_page(req,attr);
     }*/
 
     /* event is recognized update table using the recognize_sql selected */
-    int rv2 = sqlexecute(recognize_sql, &attr);
+    int rv2 = sql_execute(recognize_sql, &attr);
     if (rv2 != KORE_RESULT_OK) {
         return show_generic_message_page(req,attr);
     }
