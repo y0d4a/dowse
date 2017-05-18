@@ -62,3 +62,11 @@ int load_current_identity(struct http_request * req,attributes_set_t *ptr_attr) 
 
     return KORE_RESULT_OK;
 }
+
+/**
+ * @file load_current_identity.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

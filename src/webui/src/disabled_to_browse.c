@@ -21,6 +21,17 @@
  */
 #include <webui.h>
 
+
+/**
+ * @file disabled_to_browse.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions to solve the disabled_to_browse request ...
+ *
+ * When a thing is disabled to browse its HTTP traffic is redirected on this URL, that consists in a static page.
+ *
+ */
+
 int disabled_to_browse(struct http_request * req) {
     template_t tmpl;
 	attributes_set_t attr;

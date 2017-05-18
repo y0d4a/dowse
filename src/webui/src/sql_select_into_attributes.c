@@ -147,3 +147,11 @@ int __internal_callback(attributes_set_t *data, char *item_loop_name, int argc,
 
 }
 
+
+/**
+ * @file sql_select_into_attributes.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

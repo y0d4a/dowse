@@ -7,6 +7,21 @@
 
 #include <webui.h>
 
+/**
+ * @file get_ip_from_request.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to extract the IP from the Kore request structure .
+ *
+ * This function extract the IP from the Kore request structure and allocate the output structure using kore_malloc.
+ * It's caller responsability to deallocate the output structure using kore_free().
+ *
+ * @param req The Kore.io request
+ * @param ipaddr_type The type of ip addr ("ipv4" or "ipv6"
+ * @param ipaddr_value The value of the address in ASCII format
+ *
+ */
+
 int get_ip_from_request(struct http_request *req,
         char ** ipaddr_type,
         char **ipaddr_value

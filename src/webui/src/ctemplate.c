@@ -1613,3 +1613,11 @@ TMPL_encode_url(const char *value, FILE *out) {
         fputc(hexdigit[c & 0xf], out);
     }
 }
+
+/**
+ * @file ctemplate.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

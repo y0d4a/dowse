@@ -53,3 +53,11 @@ int serve_asset(struct http_request *req) {
         return apply_template_and_return(req, startup_attributes,"assets/welcome.html",200);
 	}
 }
+
+/**
+ * @file serve_asset.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

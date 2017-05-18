@@ -26,9 +26,11 @@
  * @file captive_portal_admin.c
  * @author Nicola Rossi <nicola@dyne.org>
  * @date Stardate -305623.39963850833
- * @brief This function serve the captive_portal_admin page request.
+ * @brief This file contain the function to serve the captive_portal_admin page request.
  *
- *
+ **/
+
+/**
  * In this function will be rendered the captive_portal_admin page request, providing:
  *  - aggregate state of all things in the Dowse network or rather all things are on or off
  *  - event grouped by mac address and typology

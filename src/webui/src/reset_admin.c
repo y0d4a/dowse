@@ -186,3 +186,11 @@ int check_if_ip_admin_configured(attributes_set_t *ptr_attrl) {
 
    return rv;
 }
+
+/**
+ * @file reset_admin.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

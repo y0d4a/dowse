@@ -21,6 +21,24 @@
  */
 #include <webui.h>
 
+
+/**
+ * @file captive_portal_client.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contain the function to serve the captive_portal_client page request.
+ *
+ */
+
+/**
+ *
+ * In this function will be rendered the captive_portal_client page request, providing:
+ *  - aggregate state of all things in the Dowse network or rather all things are on or off
+ *  - event grouped by mac address and typology
+ *  - Temporarily, changing the redirection to captive_portal_admin disabling it, until the next event will be triggered.
+ *
+ */
+
 int captive_portal_client(struct http_request * req) {
     log_entering();
     template_t tmpl;
@@ -35,10 +53,10 @@ int captive_portal_client(struct http_request * req) {
     sprintf(line,"select value as cur_state from parameter where variable='state all things'");
     sql_select_into_attributes(line,NULL,&attr);
 
+    /* */
     load_current_identity(req,&attr);
 
-    // The captive portal read the IP/macaddr from the client request
-    //
+    /* The captive portal read the IP/macaddr from the client request */
 
     char sql[256];
     char ip4[32],ip6[64];
@@ -50,7 +68,8 @@ int captive_portal_client(struct http_request * req) {
         ip4[0] = 0;
         sprintf(ip6, "%s", identity.ipaddr_value);
     }
-    /* We add macaddress */
+
+    /**  We insert in the table  "found" the macaddress connected */
      snprintf(sql,sizeof(sql),"INSERT IGNORE INTO found(macaddr,ip4,ip6) "
      "VALUES (upper('%s'),'%s','%s') ",identity.macaddr,ip4,ip6);
      WEBUI_DEBUG;
@@ -58,6 +77,8 @@ int captive_portal_client(struct http_request * req) {
      if ( sql_execute(sql, &attr) != KORE_RESULT_OK) {
          return show_generic_message_page(req,attr);
      }
+
+     /*  We insert in the table "event" the event triggered */
     snprintf(sql,sizeof(sql),"INSERT INTO event (level,macaddr,ip4,ip6,description) "
             "VALUES ('warning',upper('%s'),'%s','%s','%s') ",identity.macaddr,ip4,ip6, __EVENT_NEW_MAC_ADDRESS);
     WEBUI_DEBUG;
@@ -66,7 +87,7 @@ int captive_portal_client(struct http_request * req) {
         return show_generic_message_page(req,attr);
     }
 
-    /* */
+    /* Select the name and macaddr from the table found ... because it will be just present */
     sprintf(sql,"select upper(macaddr) as client_macaddr,name as client_name from found where upper(macaddr)=upper('%s')",identity.macaddr);
 
     if (sql_select_into_attributes(sql,NULL,&attr) != KORE_RESULT_OK) {
@@ -79,6 +100,7 @@ int captive_portal_client(struct http_request * req) {
 
     load_global_attributes(attr);
 
+    /* Render the page */
     template_load("assets/captive_portal_client.html",&tmpl);
     template_apply(&tmpl,attr,out);
 

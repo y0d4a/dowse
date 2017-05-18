@@ -259,3 +259,11 @@ WEBUI_TEST_UNIT(A003) {
     RETURN_ASSERT(1);
 
 }
+
+/**
+ * @file template.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

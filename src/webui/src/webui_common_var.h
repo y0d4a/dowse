@@ -35,3 +35,11 @@ __WEBUI_EXTERN__ struct identity_t{
  * */
 
 #endif /* WEBUI_COMMON_VAR_H_ */
+
+/**
+ * @file webui_common_var.h
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

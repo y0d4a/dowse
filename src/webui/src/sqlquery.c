@@ -61,3 +61,11 @@ int sqlquery(char *query,
     mysql_close(db);
     return called;
 }
+
+/**
+ * @file sqlquery.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

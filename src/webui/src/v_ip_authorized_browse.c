@@ -73,7 +73,7 @@ int v_ip_authorized_browse(struct http_request * req, char*data) {
     if (rv == _IP_IS_ADMIN_) {
         WEBUI_DEBUG;
 
-        if (admin_should_handle_event(macaddr)) {
+        if (admin_should_handle_new_event(macaddr)) {
             func("? save request on redis host+path [%s][%s]", req->host,
                     req->path);
             int rv = save_request_on_redis(req, macaddr);
@@ -202,3 +202,11 @@ int _check_if_macaddress_is_authorized_to_browse(char*macaddr,
     return rv; /* The db is configured but it's the admin */
 }
 
+
+/**
+ * @file v_ip_authorized_browse.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

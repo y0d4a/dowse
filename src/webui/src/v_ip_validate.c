@@ -128,3 +128,11 @@ int _check_if_ip_is_admin(char*ipaddr_type,char*ipaddr_value,attributes_set_t*pt
     if (called==0) return _ADMIN_NOT_CONFIGURED_; /* The db is not configured so we should configure it */
     return _IP_IS_NOT_ADMIN_; /* The db is configured but it's the admin */
 }
+
+/**
+ * @file v_ip_validate.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

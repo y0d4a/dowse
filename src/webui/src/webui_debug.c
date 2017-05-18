@@ -21,3 +21,11 @@ WEBUI_DEF_ERROR_LEVEL_MESSAGE(info) ;
 WEBUI_DEF_ERROR_LEVEL_MESSAGE(warning) ;
 WEBUI_DEF_ERROR_LEVEL_MESSAGE(success) ;
 WEBUI_DEF_ERROR_LEVEL_MESSAGE(error);
+
+/**
+ * @file webui_debug.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

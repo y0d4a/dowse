@@ -74,3 +74,11 @@ int reset_admin_device() {
     return rv;
 }
 
+
+/**
+ * @file kore_preload.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

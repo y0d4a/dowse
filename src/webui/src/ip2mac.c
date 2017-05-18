@@ -34,6 +34,20 @@
 #include <arpa/inet.h>
 #include <ctype.h>
 
+
+/**
+ * @file ip2mac.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to IP and Macaddr management.
+ *
+ */
+
+/**
+ * Convert a string to upper case it will be used for macaddr so we handle only upper case macaddr,
+ *  to don't handle case-sensitive problem , like 00:AA:BB:CC != 00:aa:Bb:cC:DD
+ *
+ * */
 char *to_upper(char*str){
   int i;
   for (i=0;i<strlen(str);i++) {
@@ -42,6 +56,16 @@ char *to_upper(char*str){
   return str;
 }
 
+/**
+ *  Convert an ipaddr to a macaddr in error case it result KORE_RESULT_ERROR and ptr_attr contain the
+ *  related error message.
+ *  Note: the macaddress resolution require a device to solve the ARP request and it is specified using
+ *  the environment variable "interface" .
+ *  If the IP is of the same machine the request are short-circuted on the loopback device so the
+ *  IP stack didn't use the phisical layer and the macaddress is not solvable.
+ *  In that case the macaddr is setup to "00:00:00:00:00:00"
+ *
+ * */
 int ip2mac(char *ipaddr_type, char*ipaddr_value, char*macaddr,attributes_set_t *ptr_attr) {
     func("converting from %s %s on %s",ipaddr_type,ipaddr_value,getenv("interface"));
 
@@ -64,7 +88,7 @@ int ip2mac(char *ipaddr_type, char*ipaddr_value, char*macaddr,attributes_set_t *
     }
 }
 
-/**/
+/* An internal function to */
 void ethernet_mactoa(struct sockaddr *addr,char*buff) {
 
   unsigned char *ptr = (unsigned char *) addr->sa_data;
@@ -176,7 +200,7 @@ int convert_from_ipv6(char *ipaddr_value, char *mac_addr,attributes_set_t *ptr_a
     sin = (struct sockaddr_in6 *) &areq.arp_ha;
     sin->sin6_family = ARPHRD_ETHER;
 
-    /* TODO definizione di device su cui è attestata webui */
+    /* TODO definizione di device su cui e' attestata webui */
     char *dev=getenv("interface");
     if (dev==NULL) {
         dev="eth0";

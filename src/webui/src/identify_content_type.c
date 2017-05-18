@@ -9,10 +9,20 @@
 #include <string.h>
 #include <dowse.h>
 
-int ends_with(const char* radix,const char* ending) {
-    if (strlen(radix) >= strlen(ending)) {
+/**
+ * @file identify_content_type.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to identify the type from the filename.
+ *
+ * This function use the suffix of the filename to return the content-type to set in the http_response
+ *
+ */
+
+int ends_with(const char* suffix,const char* ending) {
+    if (strlen(suffix) >= strlen(ending)) {
         return (strstr(
-                radix+(strlen(radix)- strlen(ending)), ending)!=NULL);
+                suffix+(strlen(suffix)- strlen(ending)), ending)!=NULL);
     } else {
         return 0;
     }

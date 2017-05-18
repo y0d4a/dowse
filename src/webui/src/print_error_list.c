@@ -123,3 +123,11 @@ int print_error_list(struct http_request * req) {
 
     return (KORE_RESULT_OK);
 }
+
+/**
+ * @file print_error_list.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

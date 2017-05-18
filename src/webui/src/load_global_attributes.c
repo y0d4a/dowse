@@ -41,3 +41,11 @@ int load_global_attributes(attributes_set_t attr) {
 
     return (rv>=0);
 }
+
+/**
+ * @file load_global_attributes.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

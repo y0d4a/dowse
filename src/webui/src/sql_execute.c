@@ -37,3 +37,11 @@ int sql_execute(char*command,attributes_set_t *ptr_attrl){
 
   return KORE_RESULT_OK;
 }
+
+/**
+ * @file sql_execute.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */

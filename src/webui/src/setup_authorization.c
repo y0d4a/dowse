@@ -108,3 +108,11 @@ int setup_authorization(attributes_set_t *attributes_result) {
       if(redis) redisFree(redis);
       return KORE_RESULT_OK;
 }
+
+/**
+ * @file setup_authorization.c
+ * @author Nicola Rossi <nicola@dyne.org>
+ * @date Stardate -305623.39963850833
+ * @brief This file contains the functions related to ...
+ *
+ */
